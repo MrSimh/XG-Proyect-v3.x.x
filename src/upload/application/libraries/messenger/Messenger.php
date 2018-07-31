@@ -54,7 +54,7 @@ final class Messenger extends XGPCore
             `message_time` = '" . $options->getTime() . "',
             `message_type` = '" . $options->getType() . "',
             `message_from` = '" . $options->getFrom() . "',
-            `message_subject` = '" . $options->getSubject() . "',
+            `message_subject` = '" . addslashes($options->getSubject()) . "',
             `message_text` 	= '" . $options->getMessageText() . "';"
         );
     }

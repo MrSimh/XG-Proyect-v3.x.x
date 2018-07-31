@@ -12,22 +12,31 @@
 ###			#848484 grey (TEXT)
 ###
 #####################################################################*/
-html,
-body {
-    /*background:#000 url(../../images/home/body-bg.gif) repeat-x 0 32px; */
+
+
+html,body {
     background-color: #000000;
     height:100%;
     color:#473e39;
     font-family: Helvetica, Arial, sans-serif;
     font-size:12px;
+background: #000 url("../../images/recover/bg.jpg") no-repeat;
+box-shadow: 0px 0px 10px rgba(34,116,157,0.5),0px 0px 10px rgba(34,116,157,0.5); 
+background-size: 100%;
+/*responssive*/
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+
 }
 
-#start {background:url(../../images/home/page-bg.jpg) no-repeat scroll 50% 32px;}
-#start.partner-rtl2 {background:url(../../images/home/page-bg_rtl2.jpg) no-repeat scroll 50% 32px;}
-#start.partner-komputerswiat {background:url(../../images/home/page-bg_komputerswiat.jpg) no-repeat scroll 50% 32px;}
-#start.partner-juegosweb {background:url(../../images/home/page-bg_juegosweb.jpg) no-repeat scroll 50% 32px;}
-#start.partner-onet {background:url(../../images/home/page-bg.jpg) no-repeat scroll 50% 0px;}
-#start.partner-freenet {background:url(../../images/home/page-bg_freenet.jpg) no-repeat scroll 50% 32px;}
+/*#start {
+  background: #000 url("../../images/recover/bg.jpg") no-repeat;
+box-shadow: 0px 0px 10px rgba(34,116,157,0.5),0px 0px 10px rgba(34,116,157,0.5); 
+background-size: 100%;
+
+}*/
 
 /*###########################
 ###		 PARALLAX
@@ -54,16 +63,10 @@ body {
 /*###########################
 ###		 STUFF
 ###########################*/
-a:link {color:#4579a4; font-weight:bold; outline:none; text-decoration:none;}
-a:visited {color:#619fc8; font-weight:bold; text-decoration:none;}
-a:hover, a:active {color:#619fc8; outline:none;}
+a:link {color:#9e655f; font-weight:bold; outline:none; text-decoration:none;}
+a:visited {color:#9e655f; font-weight:bold; text-decoration:none;}
+a:hover, a:active {color:#9e655f; outline:none;}
 a:active {position:relative; top:1px;}
-p {
-    color:#848484;
-    font-size:12px;
-    line-height:normal;
-    margin:15px 0;
-}
 
 a.button, a.button:visited {
     background: url("../../images/home/button.jpg") repeat-x scroll 0 top #22303F;
@@ -109,10 +112,11 @@ a.blue.button:hover { background-color: #0364B9; }
 */
 #header {
     height:110px;
-    margin:0 auto;
-    padding:32px 0 0;
+    padding:40px 0 0;
     position:relative;
-    width:715px;
+    margin: auto;
+    width: 96%;
+   /* border: 3px solid green;*/
 }
 
 .partner-onet #header {
@@ -143,7 +147,7 @@ h2 {
 h4 {color:#619FC8;}
 
 a#loginBtn {
-    background:url(../../images/home/sprite.png) no-repeat scroll 0 0;
+    /*background:url(../../images/home/sprite.png) no-repeat scroll 0 0;*/
     color:#FFF;
     display:block;
     float:right;
@@ -203,7 +207,7 @@ a#loginBtn:hover {background-position: -102px 0;}
 #pwLostForm,
 #loginForm {
     height:195px;
-    margin:10px auto 0;
+    margin:27px auto 0;
     width:190px;
     overflow: visible;
     z-index: 100000;
@@ -236,16 +240,17 @@ a#loginBtn:hover {background-position: -102px 0;}
 }
 .checked {color:#619FC8;}
 #loginForm a {
-    background:url(../../images/home/arrow.gif) no-repeat 0 3px;
+   /* background:url(../../images/home/arrow.gif) no-repeat 0 3px;
     font-size:11px;
     font-weight:normal;
     height:15px;
     line-height:15px;
-    padding:0 0 0 11px;
+    padding:0 0 0 11px;*/
 }
+
 #resendLink #formSubmit,
 #pwLostForm #formSubmit,
-#loginForm #loginSubmit {
+/*#loginForm #loginSubmit {
     background:url(../../images/home/login-btn.gif) no-repeat;
     color:#FFF;
     cursor:pointer;
@@ -259,11 +264,11 @@ a#loginBtn:hover {background-position: -102px 0;}
     text-align:center;
     text-shadow:-1px -1px 0 #501313;
     width:187px;
-}
+}*/
 
 #resendLink #formSubmit:hover,
 #pwLostForm #formSubmit:hover,
-#loginForm #loginSubmit:hover {background-position:0 -30px;}
+/*#loginForm #loginSubmit:hover {background-position:0 -30px;}*/
 
 #resendLinkForm,
 #pwLostForm {
@@ -308,32 +313,91 @@ a#loginBtn:hover {background-position: -102px 0;}
 #### 	SUBSCRIBE
 ############################
 */
+
+.galerie {
+  /*  background : #ccc;*/
+    width : 360px; /* (50 + (5 * 2) + 10) * 5 + 10 */
+	    margin: auto;
+    width: 50%;
+  /*  border: 3px solid green;*/
+    padding: 10px;
+
+}
+fieldset {
+ padding:0 20px 20px 20px;
+ margin-bottom:10px;
+ border:1px solid #DF3F3F;
+ height: 237px;
+ background:#1d2228;
+ opacity: 0.9;
+ 	box-shadow: 0px 0px 20px #fd9fa3;/* #22749D;*/
+    margin-top: 10px;
+    border: 1px solid #ffc5c7; /*#22749D;*/
+    border-collapse: separate !important;
+ }
+ 
+
+ legend {
+ color:#ffeae9;
+ /*color:#b5cfea;*/
+ font-weight:bold;
+     font-size: 20px;
+ }
+.boîte {
+   /* background : #69c;*/
+    float : left;
+    margin : 10px 0 10px 10px;
+    padding : 5px;
+    text-align : center;
+}
+.boîte legend {
+    text-align : left;
+}
+.clear {
+    clear : both;
+    visibility : hidden;
+}
+.centrer{
+    margin: auto;
+    width: 45%;
+   /* border: 3px solid green;*/
+    padding: 10px;
+}
+ @media screen and (max-width:1000px){
+.centrer{
+    margin: auto;
+    width: 100%;
+   /* border: 3px solid green;*/
+    padding: 10px;
+}
+}
+
 #subscribe {
-    -moz-border-radius:2px;
+  /*  -moz-border-radius:2px;
     -webkit-border-radius:2px;
     display:inline;
     float:left;
     margin: 48px 1px 8px 8px;
     width:220px;
-    position: relative;
+    position: relative;*/
 }
 #subscribeForm {
     -moz-border-radius:2px;
     -webkit-border-radius:2px;
-    background:none repeat scroll 0 0 #22303F;
-    border:1px solid #2D343C;
-    width:220px;
+    /*background:none repeat scroll 0 0 #22303F;*/
+   /* border:1px solid #2D343C;*/
+  /*  width:220px;*/
 }
-#subscribeForm h2 {
+/*#subscribeForm h2 {
     font-size:14px;
     padding:0 0 0 10px;
     text-transform:uppercase;
     text-shadow:1px 2px #000000;
     border-bottom:1px dotted #000;
-}
+}*/
 
 #subscribeForm .input-wrap {
-    background:#22303f url(../../images/home/subscribe-form-bg.png) repeat-x 0 bottom;
+   /* background:#22303f url(../../images/home/subscribe-form-bg.png) repeat-x 0 bottom;*/
     height:50px;
 }
 #subscribeForm .first {
@@ -349,10 +413,10 @@ a#loginBtn:hover {background-position: -102px 0;}
     font-size:11px;
 }
 #subscribeForm #submitWrap {
-    background:url(../../images/home/subscribe-bg.jpg) repeat-x;
+   /* background:url(../../images/home/subscribe-bg.jpg) repeat-x;*/
     position: relative;
 }
-#subscribeForm #submitWrap label {
+/*#subscribeForm #submitWrap label {
     background:none;
     color:#848484;
     font-size:11px;
@@ -360,8 +424,8 @@ a#loginBtn:hover {background-position: -102px 0;}
     padding:0;
     margin:0 auto;
     width: 220px;
-}
-#stayLoggedIn,
+}*/
+/*#stayLoggedIn,
 #agb {
     background: #ffffff;
     border:0;
@@ -371,13 +435,13 @@ a#loginBtn:hover {background-position: -102px 0;}
     margin: 0px 5px 15px 10px;
     width: 15px;
     padding:0;
-}
+}*/
 
-* html #agb { margin:5px 5px 15px 10px;}
+/** html #agb { margin:5px 5px 15px 10px;}*/
 
 #stayLoggedIn {background:0; margin:0 5px 0 0;}
 
-#regSubmit {
+/*#regSubmit {
     background:url("../../images/home/sprite.png") no-repeat scroll 0 -30px transparent;
     color:#FFFFFF;
     cursor:pointer;
@@ -392,7 +456,8 @@ a#loginBtn:hover {background-position: -102px 0;}
     width:155px;
 }
 #regSubmit:hover {background-position:0 -84px; text-shadow:-1px -1px #5F5F5F;}
-input#regSubmit {width:205px;}
+input#regSubmit {width:205px;}*/
+
 /*
 ############################
 ####  CONTENT MENU/TABS
@@ -403,7 +468,7 @@ input#regSubmit {width:205px;}
     width:487px;
 }
 #menu {
-    background:url(../../images/home/tab-sprite.gif) no-repeat scroll 15px -33px;
+   /* background:url(../../images/home/tab-sprite.gif) no-repeat scroll 15px -33px;*/
     height:33px;
 }
 #tabs {
@@ -538,12 +603,9 @@ input#regSubmit {width:205px;}
 */
 
 #start {
-    min-height: 100%;
-    height: auto !important;
-    margin: 0 auto -140px; /* the bottom margin is the negative value of the footer's height */
-}
-#start.partner-gazeta {
-    min-height: 85%;
+   /*min-height: 100%;*/
+   /*height: 593px;*/
+  /* margin: 0px auto -140px; *//* the bottom margin is the negative value of the footer's height */
 }
 #push {
     height: 140px; /* .push must be the same height as .footer */
@@ -555,7 +617,8 @@ input#regSubmit {width:205px;}
     color:#425463;
     font-size:11px;
     margin:20px 0 0;
-    height:120px;
+    height: 55px;
+	opacity:0; /* ON ENLEVE LE FOOTER, il ne fait qu'embêter le monde.*/
 }
 #footer p {
     color:#425463;
@@ -677,7 +740,7 @@ input#regSubmit {width:205px;}
     font-size:11px;
     font-weight:bold;
     padding: 5px;
-    background:#0b3f4f url(../../images/home/tooltip-bg.png) repeat-x;
+   /* background:#0b3f4f url(../../images/home/tooltip-bg.png) repeat-x;*/
     border:1px solid #00c1fc;
     box-shadow: 2px 2px 10px #000;
     -moz-box-shadow: 2px 2px 10px #000;
@@ -739,20 +802,21 @@ input#regSubmit {width:205px;}
     display:none
 }
 .formError .formErrorContent {
-    color:red;
+    color:#b72921;
     width:250px;
     font-family:tahoma;
     font-size:11px;
     font-weight:bold;
-    background:#0b3f4f url(../../images/home/tooltip-bg.png) repeat-x;
-    border:1px solid #00c1fc;
+   /* background:#0b3f4f url(../../images/home/tooltip-bg.png) repeat-x;*/
+    border:1px solid #602833;
     box-shadow: 2px 2px 10px #000;
     -moz-box-shadow: 2px 2px 10px #000;
     -webkit-box-shadow: 2px 2px 10px #000;
 }
 .formError .icon {
-    background:url(../../images/home/warning.gif) no-repeat scroll 5px 2px;
-    padding:4px 10px 6px 35px;
+    /*background:url(../../images/home/warning.gif) no-repeat scroll 5px 2px;*/
+	background-color:#0E0E0E;
+    padding:0px 10px 6px 7px;
 }
 .greenPopup .formErrorContent {
     width:230px;
@@ -762,7 +826,7 @@ input#regSubmit {width:205px;}
     color:#02ACE0;
 }
 .formError .formErrorArrow {
-    background:url(../../images/home/tooltip-arrow.gif) no-repeat;
+   /* background:url(../../images/home/tooltip-arrow.gif) no-repeat;*/
     height:15px;
     left:1px;
     position:absolute;
@@ -854,7 +918,7 @@ body .usernameLoginformError {
 }
 body .passwordLoginformError .formErrorArrow,
 body .usernameLoginformError .formErrorArrow {
-    background:url(../../images/home/img_rtl/tooltip-arrow.gif) no-repeat;
+   /* background:url(../../images/home/img_rtl/tooltip-arrow.gif) no-repeat;*/
     left:266px;
 }
 

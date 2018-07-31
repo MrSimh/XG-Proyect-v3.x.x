@@ -15,15 +15,15 @@ function changeAction(type,formular)
 
     if(type == "login")
     {
-        document.forms[formular].action = "http://"+uniUrl+"/game/reg/login2.php";
+        document.forms[formular].action = uniUrl + "game/reg/login2.php";
     }
     else if(type == "getpw")
     {
-        document.forms[formular].action = "http://"+uniUrl+"/index.php?page=mail";
+        document.forms[formular].action = uniUrl + "index.php?page=mail";
     }
     else if(type == "register")
     {
-        document.forms[formular].action = "http://"+uniUrl+"/index.php?page=register";
+        document.forms[formular].action = uniUrl + "index.php?page=register";
 
     }
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <meta name="language" content="es">
+    <meta name="language" content="fr">
     <meta name="author" content="XG Proyect">
     <meta name="publisher" content="XG Proyect">
     <meta name="copyright" content="XG Proyect">
@@ -12,7 +12,6 @@
     <meta name="robots" content="index,follow">
     <meta name="Revisit" content="After 14 days">
     <title>{servername}</title>
-    <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="{css_path}reset.css">
     <link rel="stylesheet" type="text/css" href="{css_path}forms.css">
 
@@ -35,7 +34,7 @@
                             "regex":"none",
                             "alertText":"{hm_field_required}",
                             "alertTextCheckboxMultiple":"Toma una decisi\u00f3n",
-                            "alertTextCheckboxe":"{hm_must_accept_tandc}"},
+                            "alertTextCheckboxe":"{hm_im_not_a_robot}"}, // hm_must_accept_tandc
                         "length":{
                             "regex":"none",
                             "alertText":"{hm_username_length}"},
@@ -126,153 +125,165 @@
 
 <body>
 	<div id="start">
-	    <div id="header">
-                <h1>
-                	<img src="{game_logo}">
-                    <a href="./" title="{hm_hidden_title}">
-                        {hm_hidden_title}                    </a>
-                </h1>
+			<div id="header">
+				<!--<img src="{game_logo}">		-->
+		</div>
+		
+		<div class="galerie">
+		
+			<div class="centrer boîte">
+			<fieldset>
+			   <legend>{hm_login_button}</legend>
+				   						<br>
 
-                                                    <a id="loginBtn" href="javascript:void(0)" title="Login">
-                        {hm_login_button}                    </a>
+				   <!--   <a id="loginBtn" href="javascript:void(0)" title="Login">
+							{hm_login_button}
+					 </a>-->
 
-                		<div id="login">
-		    <form id="loginForm" name="loginForm" method="post" action="index.php">
-                <input type="hidden" name="kid" value="">
+			   <div >
+			
+				<form id="loginForm" name="loginForm" method="post" action="index.php">
+					<input type="hidden" name="kid" value="">
+				<div class="input-wrap" style="display:none;">
+					<label for="serverLogin">
+									{hm_universe}                            </label>
+
+					<div class="black-border">
+									<select class="js_uniUrl" id="serverLogin" name="uni">
+									</select>
+								</div>
+				</div>
 			<div class="input-wrap">
-			    <label for="serverLogin">
-                                {hm_universe}                            </label>
-
-			    <div class="black-border">
-                                <select class="js_uniUrl" id="serverLogin" name="uni">
-                                </select>
-                            </div>
-			</div>
-		<div class="input-wrap">
-						<label for="usernameLogin">{hm_username_mail}</label>
-						<div class="black-border">
-                            <input class="js_userName" type="text" onkeydown="hideLoginErrorBox();" id="usernameLogin" name="login" value="">
-						</div>
-					</div>
-					<div class="input-wrap">
-                        <label for="passwordLogin">{hm_password}</label>
-						<div class="black-border">
-                            <input type="password" onkeydown="hideLoginErrorBox();" id="passwordLogin" name="pass" maxlength="20">
-						</div>
-					</div>
-
-                    <input type="submit" id="loginSubmit" value="{hm_login_button}">
-					<a href="#" id="pwLost" target="_blank" title="{hm_password_forgot}">{hm_password_forgot}</a>
-
-                    <p id="TermsAndConditionsAcceptWithLogin">
-                        {hm_terms_accept} <a class="" href="index.php?page=terms" target="_blank" title="{hm_terms}">{hm_terms}</a>                    </p>
-                </form>
-
-			</div>
-		</div>
-
-		<div id="content" class="clearfix">
-			<div id="subscribe">
-                <form id="subscribeForm" name="subscribeForm" method="POST" onsubmit="changeAction(&#39;register&#39;,&#39;subscribeForm&#39;);" action="">
-                    <input type="hidden" name="v" value="3">
-                    <input type="hidden" name="step" value="validate">
-                    <input type="hidden" name="kid" value="">
-                    <input type="hidden" name="errorCodeOn" value="1">
-                    <input type="hidden" name="is_utf8" value="1">
-
-                                                            <h2>{hm_play_for_free}</h2>
-                    <div class="input-wrap first">
-                        <label for="server">{hm_universe}</label>
-
-
-                    <div id="server" style="position:relative;">
-        <table cellspacing="0" cellpadding="0" onclick="switch_uni_selection()" onmouseover="this.style.cursor=&#39;pointer&#39;" class="server_table" style="cursor: pointer;">
-        <tbody><tr>
-            <td id="uni_select_box" class="select" style="height:19px;overflow:hidden;">
-                <span id="uni_name" class=""></span>
-            </td>
-            <td style="width:18px; background: url('{img_path}dropdownmenu_arrow.png') no-repeat scroll 0 0 #8D9AA7;"></td>
-        </tr>
-        </tbody></table>
-        <input class="js_uniUrl" type="hidden" name="uni_url" id="uni_domain" value="">
-        <div id="uni_selection" style="display: none;">
-                                    <script type="text/javascript">
-                        <!--
-                            select_uni('{base_path}'.replace('http://', '').replace('https://', '').slice(0, -1), '','');
-                        //-->
-                        </script>
-
-            <div id="row-0" class="server-row " title="" onclick="select_uni(,);" onmouseover="highlightRow(&#39;row-0&#39;);this.style.cursor=&#39;pointer&#39;" onmouseout="unHighlightRow(&#39;row-0&#39;);">
-                <span class="uni_span "></span>
-            </div>
-                    </div>
-    </div>
-					</div>
-					<div class="input-wrap">
-                        <label for="username">{hm_username}</label>
-						<div class="black-border">
-
-                            <!-- validate options dürfen nicht umgebrochen werden, da das plugin sonst nicht mehr funktioniert  -->
-                            <input id="username" class="js_userName validate[required,custom[noSpecialCharacters],custom[noBeginOrEndUnderscore],custom[noBeginOrEndWhitespace],custom[noBeginOrEndHyphen],custom[notMoreThanThreeUnderscores],custom[notMoreThanThreeWhitespaces],custom[notMoreThanThreeHyphen],custom[noCollocateUnderscores],custom[noCollocateWhitespaces],custom[noCollocateHyphen],length[3,20]]" type="text" name="character" value="{user_name}">
-						</div>
-					</div>
-                    <div class="input-wrap">
-                        <label for="password">{hm_password}</label>
-                        <div class="black-border">
-                            <input class="validate[required,pwLength[8,20]]" type="password" id="password" name="password" value="" maxlength="20">
-                        </div>
-                    </div>
-					<div class="input-wrap">
-                        <label for="email">{hm_mail_address}</label>
-						<div class="black-border">
-                            <input class="validate[required,custom[email],length[0,255]]" type="text" id="email" name="email" value="{user_email}">
-						</div>
-					</div>
-					<div class="input-wrap">
-                        <div id="securePwd">
-							<p>{hm_password_level}</p>
-							<div class="valid-icon invalid"></div>
-							<div class="securePwdBarBox">
-								<div id="securePwdBar"></div>
+							<label for="usernameLogin">{hm_username_mail}</label>
+							<div class="black-border">
+								<input class="js_userName" type="text" onkeydown="hideLoginErrorBox();" id="usernameLogin" name="login" value="">
 							</div>
-							<br class="clearfloat">
 						</div>
-					</div>
-					<div id="submitWrap">
-						<input class="validate[required]" type="checkbox" id="agb" name="agb">
-                        <label>
-                            <span>{hm_accept} <a class="" target="_blank" href="index.php?page=terms" title="{hm_terms}">{hm_terms}</a> {hm_and} <a class="" target="_blank" href="index.php?page=policy" title="{hm_policy}">{hm_policy}</a></span>
-						</label>
-                        <div onclick="if($.validationEngine.submitValidation(&#39;subscribeForm&#39;)) {document.forms[&#39;subscribeForm&#39;].submit();}">
-                            <input type="submit" onclick="setServerCookie(&#39;subscribeForm&#39;);setUserNameCookie(&#39;subscribeForm&#39;);" id="regSubmit" value="{hm_register}">
-                        </div>
-					</div>
-				</form>
-                			</div>
-			<div id="contentWrap">
-				<div id="menu" style="background-position: 15px -33px;">
-					<ul id="tabs">
-						<li><a id="tab1" href="ajax.php?content=home" class="current">{hm_home}</a></li>
-                        <li><a id="tab2" href="ajax.php?content=info">{hm_about}</a></li>
-                        <li><a id="tab3" href="ajax.php?content=media">{hm_media}</a></li>
-					</ul>
-                                            <a id="tab4" href="{forum_url}" target="_blank">{hm_forum}</a>
-                                        					<br class="clearfloat">
+						<div class="input-wrap">
+							<label for="passwordLogin">{hm_password}</label>
+							<div class="black-border">
+								<input type="password" onkeydown="hideLoginErrorBox();" id="passwordLogin" name="pass" maxlength="20">
+							</div>
+						</div>
+						</br>
+						<input type="submit" id="loginSubmit" value="{hm_login_button}">
+						</br></br>
+						<a href="#" id="pwLost" target="_blank" title="{hm_password_forgot}">{hm_password_forgot}</a>
+
+						<!--<p id="TermsAndConditionsAcceptWithLogin">
+							{hm_terms_accept} <a class="" href="index.php?page=terms" target="_blank" title="{hm_terms}">{hm_terms}</a>  
+						</p>-->
+					</form>
+
 				</div>
-				<div id="tabContent">
-					<div id="ajaxContent">
-</div>
-				</div>
-				<div id="contentFooter"></div>
+				</fieldset>
 			</div>
+
+			<div class="centrer boîte">
+			<fieldset>
+				   <legend>{hm_register}</legend>
+				   <br>
+				<div id="subscribe">
+				
+			
+					<form id="subscribeForm" name="subscribeForm" method="POST" onsubmit="changeAction(&#39;register&#39;,&#39;subscribeForm&#39;);" action="">
+						<input type="hidden" name="v" value="3">
+						<input type="hidden" name="step" value="validate">
+						<input type="hidden" name="kid" value="">
+						<input type="hidden" name="errorCodeOn" value="1">
+						<input type="hidden" name="is_utf8" value="1">
+
+				
+						<div  style="display: none;"class="input-wrap first">
+						  <label for="server">{hm_universe}</label>
+
+
+								<div id="server" style="position:relative;">
+						 <table cellspacing="0" cellpadding="0" onclick="switch_uni_selection()" onmouseover="this.style.cursor=&#39;pointer&#39;" class="server_table" style="cursor: pointer;">
+							<tbody><tr>
+								<td id="uni_select_box" class="select" style="height:19px;overflow:hidden;">
+									<span id="uni_name" class=""></span>
+								</td>
+								<td style="width:18px; background: url('{img_path}dropdownmenu_arrow.png') no-repeat scroll 0 0 #8D9AA7;"></td>
+							</tr>
+							</tbody></table>
+							<input class="js_uniUrl" type="hidden" name="uni_url" id="uni_domain" value="">
+							<div id="uni_selection" style="display: none;">
+														<script type="text/javascript">
+											<!--
+												select_uni('{base_path}', '','');
+											//-->
+											</script>
+
+								<div id="row-0" class="server-row " title="" onclick="select_uni(,);" onmouseover="highlightRow(&#39;row-0&#39;);this.style.cursor=&#39;pointer&#39;" onmouseout="unHighlightRow(&#39;row-0&#39;);">
+									<span class="uni_span "></span>
+								</div>
+										</div>
+									</div>
+						</div>
+						
+						
+						<div class="input-wrap">
+							<label for="username">{hm_username}</label>
+							<div class="black-border">
+
+								<!-- validate options dürfen nicht umgebrochen werden, da das plugin sonst nicht mehr funktioniert  -->
+								<input id="username" class="js_userName validate[required,custom[noSpecialCharacters],custom[noBeginOrEndUnderscore],custom[noBeginOrEndWhitespace],custom[noBeginOrEndHyphen],custom[notMoreThanThreeUnderscores],custom[notMoreThanThreeWhitespaces],custom[notMoreThanThreeHyphen],custom[noCollocateUnderscores],custom[noCollocateWhitespaces],custom[noCollocateHyphen],length[3,20]]" type="text" name="character" value="{user_name}">
+							</div>
+						</div>
+						<div class="input-wrap">
+							<label for="password">{hm_password}</label>
+							<div class="black-border">
+								<input class="validate[required,pwLength[8,20]]" type="password" id="password" name="password" value="" maxlength="20">
+							</div>
+						</div>
+						<div class="input-wrap">
+							<label for="email">{hm_mail_address}</label>
+							<div class="black-border">
+								<input class="validate[required,custom[email],length[0,255]]" type="text" id="email" name="email" value="{user_email}">
+							</div>
+						</div>
+						<!--<div class="input-wrap">
+							<div id="securePwd">
+								<p>{hm_password_level}</p>
+								<div class="valid-icon invalid"></div>
+								<div class="securePwdBarBox">
+									<div id="securePwdBar"></div>
+								</div>
+								<br class="clearfloat">
+							</div>
+						</div>-->
+						<div id="submitWrap">
+							<input class="validate[required]" type="checkbox" id="agb" name="agb">
+							<label>
+								{hm_robot}
+							</label><br><br>
+							<div onclick="if($.validationEngine.submitValidation(&#39;subscribeForm&#39;)) {document.forms[&#39;subscribeForm&#39;].submit();}">
+								<input type="submit" onclick="setServerCookie(&#39;subscribeForm&#39;);setUserNameCookie(&#39;subscribeForm&#39;);" id="regSubmit" value="{hm_register}">
+							</div>
+						</div>
+					</form>
+				</div>
+			<!--	<div id="contentWrap">
+					<div id="menu" style="background-position: 15px -33px;">
+						<ul id="tabs">
+							<li><a id="tab1" href="ajax.php?content=home" class="current">{hm_home}</a></li>
+							<li><a id="tab2" href="ajax.php?content=info">{hm_about}</a></li>
+							<li><a id="tab3" href="ajax.php?content=media">{hm_media}</a></li>
+						</ul>
+												<a id="tab4" href="{forum_url}" target="_blank">{hm_forum}</a>
+																<br class="clearfloat">
+					</div>
+					<div id="tabContent">
+						<div id="ajaxContent">
+				</div>
+					</div>
+					<div id="contentFooter"></div>
+				</div>-->
+			</fieldset>
+			</div>
+			  <hr class="clear" />
 		</div>
-		<div id="push"></div>
-	</div>
-	<div id="footer">
-	    <div id="footerContent">
-            <p id="copyright">Powered by <a href="http://xgproyect.org/" target="_blank" title="XG Proyect {version}">XG Proyect</a> © 2008 - {year}.</p>
-        </div>
-	</div>
 
     	<!-- OVERLAY DIVISION -->
 

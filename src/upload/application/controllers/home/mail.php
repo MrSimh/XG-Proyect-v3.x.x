@@ -75,7 +75,8 @@ class Mail extends Controller
         $parse['lp_send_pwd_title'] = strtr($this->langs['lp_send_pwd_title'], ['%s' => $game_name]);
         $parse['display'] = 'display: none';
         $parse['error_msg'] = '';
-        $parse['css_path'] = XGP_ROOT . CSS_PATH . 'home/';
+		$parse['css_path'] = CSS_PATH . 'home/';
+        /* $parse['css_path'] = XGP_ROOT . CSS_PATH . 'home/';*/ // caca
 
         if ($_POST) {
 
