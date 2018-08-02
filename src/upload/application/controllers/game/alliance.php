@@ -21,7 +21,8 @@ use application\libraries\FormatLib;
 use application\libraries\FunctionsLib;
 use application\libraries\Timing_library;
 
-
+use const DPATH;
+use const JS_PATH;
 /**
  * Alliance Class
  *
