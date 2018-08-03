@@ -134,6 +134,7 @@ final class MessagesOptions
 
     public function setSender($sender)
     {
+		if(empty($sender)){$sender = 0;}
         $this->_sender = $sender;
     }
 

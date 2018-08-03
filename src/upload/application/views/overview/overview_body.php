@@ -4,7 +4,6 @@
 		
 		    <table class="cadre table-overview">
                 <thead>
-
                 </thead>
                 <tbody>
                     <tr class="cadre-row">
@@ -24,7 +23,6 @@
                      <tr class="cadre-row">
                          <td class="title-overview"> {ov_position}</td>
                          <td class="row-infos-overview"><a href="game.php?page=galaxy&mode=0&galaxy={galaxy_galaxy}&system={galaxy_system}">[{galaxy_galaxy}:{galaxy_system}:{galaxy_planet}]</td>
-                      
                     </tr>
                     <tr>
                           <td class='title-overview' colspan='3'>{ov_events}</td>
