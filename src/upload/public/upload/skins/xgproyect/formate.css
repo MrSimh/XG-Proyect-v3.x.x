@@ -83,12 +83,58 @@ td.v, td.s, .style td, p td
 {
   background-color     : #344566;
 }
+.centrer{
+  text-align: center;
+}
+.cadre{
+ border:1px solid #DF3F3F;
+ background:#1d2228;
+ opacity: 0.9;
+  box-shadow: 0px 0px 20px #fd9fa3;/* #22749D;*/
+    margin-top: 10px;
+    border: 1px solid #ffc5c7; /*#22749D;*/
+    border-collapse: separate !important;
+}
+
+.cadre-row{
+ background:#1d2228;
+ opacity: 0.9;
+border:none;
+}
+
+.title-overview{
+      background: #333131;
+  height: 17px;
+  border:1px solid black;
+}
+.timer-overview{
+    height: 50px;
+      border:1px solid black;
+}
+.row-infos-overview{
+    height: 20px;
+
+      border:1px solid black;
+}
+.table-overview{
+  width:570px;
+    border:1px solid black;
+}
+.planet-overview{
+      width: 200px;
+    height: 200px;
+}
+
+
+td{
+  background-color:transparent;
+}
 
 th
 {
   text-align           : center;
-  padding-left         : 3px;
-  padding-right        : 3px;
+  padding-left         : 4px;
+  padding-right        : 4px;
 }
 
 td.a
