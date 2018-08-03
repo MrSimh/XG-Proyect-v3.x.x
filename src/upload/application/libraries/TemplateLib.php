@@ -551,7 +551,32 @@ class TemplateLib
             }
         }
 
+
+// le rang c'est bizarre, les admins semblent être compté
+
+      /*  $user_rank = '-';
+        $total_rank = $this->current_user['user_statistic_total_rank'] == '' ? $this->current_planet['stats_users'] : $this->current_user['user_statistic_total_rank'];
+        $noob = FunctionsLib::loadLibrary('NoobsProtectionLib');
+        if ($noob->isRankVisible($this->current_user['user_authlevel'])) {
+            $user_rank = FormatLib::prettyNumber($this->current_user['user_statistic_total_points']) . " (" . $this->langs['ov_place'] . ' ' . FunctionsLib::setUrl('game.php?page=statistics&range=' . $total_rank, $total_rank, $total_rank) . ' / ' . $this->current_planet['stats_users'] . ")";
+        }*/
+
+
         // PARSE THE MENU AND OTHER DATA
+     
+        // $parse['user_rank'] = $user_rank;
+        $parse['user_points'] = FormatLib::prettyNumber($this->current_user['user_statistic_total_points']);
+        $parse['user_points_building'] = FormatLib::prettyNumber($this->current_user['user_statistic_total_points']);
+        $parse['user_points_defenses'] = FormatLib::prettyNumber($this->current_user['user_statistic_total_points']);
+        $parse['user_points_ships'] = FormatLib::prettyNumber($this->current_user['user_statistic_total_points']);
+        $parse['user_points_technology'] = FormatLib::prettyNumber($this->current_user['user_statistic_total_points']);
+        
+        $parse['ov_points_building'] = $this->langs['ov_points_building'] ;
+        $parse['ov_points_ships'] = $this->langs['ov_points_ships'] ;
+        $parse['ov_points_technology'] = $this->langs['ov_points_technology'] ;
+         $parse['ov_points_defenses'] = $this->langs['ov_points_defenses'] ;
+        $parse['ov_points'] = $this->langs['ov_points'] ;
+
         $parse['dpath'] = DPATH;
         $parse['version'] = SYSTEM_VERSION;
         $parse['servername'] = FunctionsLib::readConfig('game_name');
@@ -692,6 +717,7 @@ class TemplateLib
 
         return implode($new_lines);
     }
+
 }
 
 /* end of TemplateLib.php */

@@ -6,28 +6,41 @@
         }
     </script>
     <center>
-        <div id='menu'>
+        <div class="cadre" id='menu'>
             <p style="width:110px;">
             <NOBR>
                 {servername} {changelog}
             </NOBR>
             </p>
-            <table width="110" cellspacing="0" cellpadding="0">
+               <table>
+
+                 <tr>
+                    <td>
+                        {ov_points}
+                    </td>
+                    <td>
+                        {user_points}
+                    </td>
+                </tr>
+               
+
+               </table>
+            <table>
                 <tr>
                     <td>
-                        <img src="{dpath}menu/ogame-produktion.jpg" width="110" height="40" />
+                        <img src="{dpath}menu/ogame-produktion.jpg"/>
                     </td>
                 </tr>
                 {menu_block1}
                 <tr>
                     <td>
-                        <img src="{dpath}menu/info-help.jpg" width="110" height="19">
+                        <img src="{dpath}menu/info-help.jpg" >
                     </td>
                 </tr>
                 {menu_block2}
                 <tr>
                     <td>
-                        <img src="{dpath}menu/user-menu.jpg" width="110" height="35">
+                        <img src="{dpath}menu/user-menu.jpg" >
                     </td>
                 </tr>
                 {menu_block3}

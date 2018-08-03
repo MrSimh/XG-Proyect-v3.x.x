@@ -133,6 +133,10 @@ $lang['ov_planet_rename_action']			= 'Renommer';
 $lang['ov_planet_name_changed']				= 'Le nom de la planète à été changé<br /><a href="index.php" target="_top">Retour</a>';
 $lang['ov_abandon_planet_not_possible']		= 'Il n\'est pas possible d\'abandonné une planète où il y a des mouvements de flotte';
 $lang['ov_fields']							= 'Champs';
+$lang['ov_points_building']					= 'Batiments';
+$lang['ov_points_ships']					= 'Vaisseaux';
+$lang['ov_points_technology']				= 'Recherches';
+$lang['ov_points_defenses']					= 'Défenses';
 
 //----------------------------------------------------------------------------//
 //GALAXY

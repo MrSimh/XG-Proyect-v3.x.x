@@ -6,6 +6,9 @@
                 <thead>
                 </thead>
                 <tbody>
+                     <tr class="cadre-row">
+                         <td colspan='5'></td> <!-- equilibre avec un dessous qui peut être vide, pas de flottes en vol -->
+                    </tr>
                     <tr class="cadre-row">
                         <td class="planet-overview" rowspan='6'><img src="{dpath}planets/{planet_image}.jpg" height="200" width="200"></td>
                          <td colspan="2" class="title-overview centrer">
