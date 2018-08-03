@@ -33,8 +33,8 @@
                         <td class="timer-overview" colspan='3'>{building}</td>
                     </tr>
                      <tr class="cadre-row">
-                         <td colspan='4'></td>
+                         <td colspan='5'>{fleet_list}</td>
                     </tr>
                 </tbody>
             </table>    
-           {fleet_list}
+
